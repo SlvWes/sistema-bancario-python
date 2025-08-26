@@ -16,13 +16,14 @@ Sistema bancário simples em Python com operações básicas: depósito, saque e
 - Variáveis globais para controle do estado da conta
 
 ## 🎯 Estrutura do Projeto
+```
 sistema_bancario.py
 ├── Variáveis globais (saldo, extrato, limites)
 ├── Função depositar()
 ├── Função sacar()
 ├── Função ver_extrato()
 └── Loop principal com menu interativo
-
+```
 ## 📋 Regras de Negócio
 - Limite de R$ 500,00 por saque
 - Máximo de 3 saques por dia
@@ -37,3 +38,7 @@ sistema_bancario.py
 - Tratamento de erros
 - Manipulação de strings
 - Lógica de programação
+
+## 📞 Contato
+Email - wesley.s.rezende2006@gmail.com
+Numero - 11987993250

@@ -2,12 +2,12 @@ menu = """
 [d] Depositar
 [s] Sacar
 [e] Extrato
+[L] Limite
 [q] Sair
-    
 => """
 
 saldo = 0
-limite = 500
+limite = 0
 extrato = " "
 numero_saques = 0
 LIMITE_SAQUES = 3
@@ -50,17 +50,21 @@ def sacar():
     
     else:
             print("Operação falhou! O valor informado é inválido.")
-
 def ver_extrato():
     print("\n================ EXTRATO ================")
     print("Não foram realizadas movimentações."
     if not extrato else extrato)
     print(f"\nSaldo: R$ {saldo:.2f}")
     print("==========================================")
-    
+def definir_limite():
+    global limite
+    print(f"Seu limite atual é de R${limite:.2f}")
+    novo_limite = float(input("Defina seu limite de saque: "))
+
+    limite = novo_limite
 
 while True:
-    opcao = input(menu)
+    opcao = input(menu).lower()
 
     if opcao == 'd':
         depositar()
@@ -68,7 +72,10 @@ while True:
         sacar()
     elif opcao == 'e':
         ver_extrato()
+    elif opcao == 'l':
+        definir_limite()
     elif opcao == 'q':
         break
+
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
